@@ -1,7 +1,7 @@
 @use "abstracts/index" as *;
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/assets/img/header.jpg') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/img/header.jpg') no-repeat center/cover;
     height: calc(100vh - 10rem);
     @include base-grid(rows, 1, auto);
 

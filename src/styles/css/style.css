@@ -105,7 +105,7 @@ section {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/src/assets/img/header.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/img/header.jpg") no-repeat center/cover;
   height: calc(100vh - 10rem);
   display: grid;
   grid-template-rows: repeat(1, auto);
@@ -341,7 +341,7 @@ section {
 }
 
 .adv {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/assets/img/bg2.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/img/bg2.jpg") no-repeat center/cover;
 }
 .adv__title {
   color: white;
@@ -383,7 +383,7 @@ section {
 }
 
 .serv {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("/src/assets/img/bg2.jpg") no-repeat left top;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../../assets/img/bg2.jpg") no-repeat left top;
   background-size: 120%;
 }
 .serv .serv__content {
@@ -412,7 +412,7 @@ section {
 .serv .serv__content .serv__box .gears-icon {
   width: 6rem;
   height: 5rem;
-  background: url("/src/assets/img/gears-icon.svg") no-repeat center/cover;
+  background: url("../../assets/img/gears-icon.svg") no-repeat center/cover;
 }
 .serv .serv__content .serv__box__heading {
   font-size: 4.8rem;
@@ -491,10 +491,10 @@ section {
   height: 2rem;
 }
 .team__stars .blue-star-icon {
-  background: url("/src/assets/img/blue-star-icon.svg") no-repeat center/cover;
+  background: url("../../assets/img/blue-star-icon.svg") no-repeat center/cover;
 }
 .team__stars .white-star-icon {
-  background: url("/src/assets/img/white-star-icon.svg") no-repeat center/cover;
+  background: url("../../assets/img/white-star-icon.svg") no-repeat center/cover;
 }
 
 /*# sourceMappingURL=style.css.map */
