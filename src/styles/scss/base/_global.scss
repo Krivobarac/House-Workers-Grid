@@ -1,0 +1,36 @@
+@use "abstracts/index" as *;
+
+body {
+    font-family: 'Montserrat', serif;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+section {
+    padding: 7rem 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 6.4rem;
+    
+    @include rwd(768) {
+        font-size: 4.8rem;
+    }
+
+    @include rwd(430) {
+        font-size: 3.6rem;
+    }
+}
+
+.subline {
+    width: min(100%, 17rem);
+    height: .4rem;
+    background-color: $tertiary-color;
+    margin: 1rem auto 4.8rem;
+}

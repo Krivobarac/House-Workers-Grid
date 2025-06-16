@@ -1,0 +1,43 @@
+@mixin base-grid($direction, $repeat-count, $track-size, $gap: null, $justify: null, $align: null, $justifySelf: null, $alignSelf: null) {
+    display: grid;
+
+    @if $direction == rows {
+        grid-template-rows: repeat($repeat-count, $track-size);
+    } @else if $direction == columns {
+        grid-template-columns: repeat($repeat-count, $track-size);
+    } @else {
+        @error "Invalid value for $direction: '#{$direction}'. Only 'rows' or 'columns' are allowed.";
+    }
+
+    @if $gap != null {
+        gap: $gap;
+    }
+
+    @if $justifySelf != null {
+        justify-self: $justifySelf;
+    }
+
+    @if $alignSelf != null {
+        align-self: $alignSelf;
+    }
+
+    @if $justify != null {
+        justify-content: $justify;
+    }
+
+    @if $align != null {
+        align-items: $align;
+    }
+
+    @content;
+}
+
+@mixin rwd($pixels, $type: max) {
+    @if $type == max or $type == min {
+        @media (#{$type}-width: #{$pixels}px) {
+            @content;
+        }
+    } @else {
+        @error "Invalid value for $type: '#{$type}'. Only 'max' or 'min' are allowed.";
+    }
+}

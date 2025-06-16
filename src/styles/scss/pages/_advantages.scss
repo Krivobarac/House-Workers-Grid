@@ -1,0 +1,45 @@
+@use "abstracts/index" as *;
+
+.adv {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/img/bg2.jpg') no-repeat center/cover;
+
+    &__title {
+        color: white;
+    }
+
+    &__tiles {
+        @include base-grid(columns, auto-fit, minmax(31rem, 30%), 3.2rem, $justify: space-between) {
+            @include rwd(1250) {
+                grid-template-columns: repeat(auto-fit, minmax(31rem, auto));
+            }
+
+            @include rwd(430) {
+                grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+            }
+        };
+    }
+
+    &__tile {
+        background-color: white;
+        padding: 0 3.2rem 3.2rem;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &-title {
+            font-size: 2.4rem;
+            margin: 3.2rem 0 1.6rem;
+        }
+
+        &-text {
+            text-align: justify;
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__img {
+        width: calc(100% + 6.4rem);
+        margin: 0 -3.2rem;
+    }
+}

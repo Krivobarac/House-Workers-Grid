@@ -1,0 +1,27 @@
+@use "abstracts/index" as *;
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/assets/img/header.jpg') no-repeat center/cover;
+    height: calc(100vh - 10rem);
+    @include base-grid(rows, 1, auto);
+
+    .hero__content {
+        color: white;
+        text-align: center;
+
+        .hero__heading {
+            font-size: 4.8rem;
+            text-transform: capitalize;
+        }
+
+        .hero__p {
+            margin: 1.6rem 0;
+            max-width: 55rem;
+            margin: 1.6rem auto;
+        }
+
+        .hero__btns {
+            @include base-grid(columns, auto-fit, minmax(15rem, auto), 1.6rem, $justify: center);
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@use 'abstracts/index' as *;
+
+.team {
+    padding: 7rem 0;
+
+    &__title {
+        color: black;
+    }
+
+    &__tiles {
+        @include base-grid(columns, auto-fit, minmax(20rem, auto), 3.2rem, $justify: center);
+    }
+
+    &__tile {
+        background-color: white;
+        padding: 0 3.2rem 3.2rem;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+        @include base-grid(rows, 4, auto);
+
+        &-title {
+            font-size: 2.4rem;
+            margin-top: 3.2rem;
+        }
+
+        &-text {
+            margin-bottom: 1.6rem;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        &-description {
+            text-align: justify;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__img {
+        width: calc(100% + 6.4rem);
+        margin: 0 -3.2rem;
+    }
+
+    &__stars {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: 0.8rem;
+        justify-content: start;
+        align-content: end;
+
+        .blue-star-icon,
+        .white-star-icon {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .blue-star-icon {
+            background: url('/src/assets/img/blue-star-icon.svg') no-repeat center/cover;
+        }
+
+        .white-star-icon {
+            background: url('/src/assets/img/white-star-icon.svg') no-repeat center/cover;
+        }
+    }
+}

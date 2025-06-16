@@ -1,0 +1,61 @@
+@use 'abstracts/index' as *;
+
+.btn {
+    width: max-content;
+    background: transparent;
+    border: .2rem solid $secondary-color;
+    text-transform: capitalize;
+    padding: 1.6rem 3.2rem;
+    font-size: 1.76rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @include rwd(568) {
+        width: 100%;
+        max-width: 16.3rem;
+    }
+
+    &-primary {
+        @extend .btn;
+        color: $secondary-color;
+
+        &:hover {
+            background-color: $secondary-color;
+            color: #FFF;
+        }
+
+        &-white {
+            @extend .btn-primary;
+            color: #FFF;
+        }
+
+        &-black {
+            @extend .btn-primary;
+            color: inherit;
+        }
+    }
+
+    &-secondary {
+        @extend .btn;
+        color: #FFF;
+        border: .2rem solid #FFF;
+
+        &:hover {
+            background-color: #FFF;
+            color: $primary-color;
+        }
+    }
+
+    &-tertiary {
+        @extend .btn;
+        background-color: #fce11c;
+        border: 0.2rem solid #fce11c;
+        color: #FFF;
+
+        &:hover {
+            background-color: transparent;
+            color: black;
+        }
+    }
+}

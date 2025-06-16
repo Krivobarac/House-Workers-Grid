@@ -1,0 +1,111 @@
+@use "abstracts/index" as *;
+
+.header {
+    background-color: $primary-color;
+
+    .nav {
+        padding: 1.6rem 0;
+        height: 10rem;
+        @include base-grid(columns, 3, auto, $justify: space-between, $align: center) {
+            @include rwd(1200) {
+                grid-template-columns: repeat(2, auto);
+            }
+        }
+
+        .nav__checkbox {
+            display: none;
+
+            @include rwd(1200) {
+                &:checked~.nav__list {
+                    left: 0;
+                }
+
+                &:checked~.nav__burger span:nth-child(1) {
+                    transform: translate(0, 1rem) rotateZ(45deg);
+                }
+            
+                &:checked~.nav__burger span:nth-child(2) {
+                    display: none;
+                }
+            
+                &:checked~.nav__burger span:nth-child(3) {
+                    transform: rotateZ(-45deg);
+                }
+            }
+        }
+
+        &__logo {
+            z-index: 5;
+            height: 100%;
+            @include base-grid(columns, 2, auto, 1.6rem, $align: center);
+
+            &__img {
+                width: 9rem;
+            }
+
+            span {
+                color: white;
+                font-weight: 700;
+                text-transform: capitalize;
+                font-size: 2.4rem;
+
+                @include rwd(568) {
+                    display: none;
+                }
+            }
+        }
+
+        &__list {
+            display: grid;
+            grid-template: repeat(1, auto)/repeat(4, auto);
+            gap: 3.2rem;
+            list-style-type: none;
+
+            @include rwd(1200) {
+                position: absolute;
+                grid-template: repeat(4, auto)/repeat(1, auto);
+                align-content: center;
+                justify-items: center;
+                background-color: $primary-color;
+                inset: 0;
+                width: 100%;
+                left: -100%;
+            }
+
+            .nav__link {
+                color: white;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        &__btn {
+            @include rwd(1200) {
+                display: none;
+            }
+        }
+
+        &__burger {
+            z-index: 5;
+            display: none;
+            width: 3rem;
+            height: 2rem;
+            align-content: space-between;
+            cursor: pointer;
+
+            @include rwd(1200) {
+                @include base-grid(rows, 3, auto);
+            }
+
+            span {
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                border-radius: .5rem;
+            }
+        }
+    }
+}
